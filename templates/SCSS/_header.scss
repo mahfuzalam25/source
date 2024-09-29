@@ -1,0 +1,52 @@
+#header_area{
+  width: 100%;
+  background: $bgColor;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 0 10px #2d244b;
+  .inner{
+    align-items: center;
+  }
+  .logo_area{
+    flex-basis: 25%;
+    padding: $paddingSm;
+    h1{
+      margin: 0;
+    }
+    a{
+      color: $whColor;
+      &:hover{
+        color: $primaryColor;
+      }
+    }
+  }
+  .menu_area{
+    flex-basis: 55%;
+    ul{
+      text-align: right;
+    }
+    li{
+      margin-left: 15px;
+    }
+    a{
+      color:$whColor;
+      font: {
+        size: 15px;
+        weight: 600;
+      }
+      display: block;
+      padding: 5px 10px;
+      &:hover{
+        color: $primaryColor;
+      }
+    }
+    i{
+      display: none;
+    }
+  }
+  .download_cv{
+    flex-basis: 20%;
+    text-align: right;
+  }
+}

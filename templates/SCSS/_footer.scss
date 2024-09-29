@@ -1,0 +1,24 @@
+#footer_area{
+  background: $bgSec;
+  padding: $paddingSm;
+  .inner{
+    align-items: center;
+  }
+  p{
+    color: $whColor;
+    margin: 0;
+    font-size: 13px;
+  }
+  a{
+    background: $primaryColor;
+    width: 45px;
+    height: 45px;
+    display: block;
+    color: $whColor;
+    text-align: center;
+    padding-top: 12px;
+    &:hover{
+      background: $secColor;
+    }
+  }
+}

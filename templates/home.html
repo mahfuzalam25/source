@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% block title %} Home {% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="{% static 'css/styl.min.css' %}">
+</head>
+
+<body id="/">
+  <section id="hero_area">
+    {% for home in homes %}
+    <div class="container inner">
+      <div class="info_area">
+        <h5>{{home.intro}}</h5>
+        <h1>{{home.name}}</h1>
+        <h6>{{home.position}}</h6>
+        <p>{{home.description}}</p>
+        <a class="cta_btn" href="{{home.url}}">Let's Talk <i class='bx bx-right-arrow-alt'></i></a>
+      </div>
+      <div class="admin_image">
+        <img src="{{home.image.url}}" alt="">
+      </div>
+    </div>
+    {% endfor %}
+  </section>
+
+  <section id="service_area">
+    <div class="container">
+      <div class="title">
+        <h4>My Service</h4>
+        <h2>What I Do?</h2>
+      </div>
+      <div class="inner">
+        <div class="child">
+          <i class='bx bxl-sketch'></i>
+          <h3>Django Web Development</h3>
+          <p>Django <br> Custom Models & Views <br> Authentication Systems <br> Database Integration</p>
+        </div>
+        <div class="child">
+          <i class='bx bx-code-alt'></i>
+          <h3>Front-End Development</h3>
+          <p>HTML, CSS, JavaScript <br> Bootstrap, React <br> Responsive Design <br> Cross-browser Compatibility</p>
+        </div>
+        <div class="child">
+          <i class='bx bx-cog'></i>
+          <h3>API Development</h3>
+          <p>Django Rest Framework <br> RESTful API Design <br> Token-based Authentication <br> API Optimization</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio_area">
+    <div class="container">
+      <div class="title">
+        <h4>Latest Project</h4>
+        <h2>Portfolio</h2>
+      </div>
+      <div class="inner">
+        {% for project in projects %}
+        <div class="portfolio">
+          <img src="{{project.image.url}}" alt="">
+          <a href="{{project.link}}" target="_blank"><i class='bx bx-link-alt'></i></a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonial_area">
+    <div class="container">
+      <div class="title">
+        <h4>What Client Say</h4>
+        <h2>Testimonials</h2>
+      </div>
+      <div class="inner">
+        <div class="child">
+          <div class="child_head">
+            <i class='bx bxs-quote-alt-left'></i>
+            <div class="ratting">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star-half'></i>
+              <i class='bx bx-star' ></i>
+            </div>
+          </div>
+          <div class="child_body">
+            <p>Mahfuz is very responsive and professional. He is very competent and was able to answer every question and make every edit I needed. He and his team goes over and beyond to make sure everything is how we need it. Even after the delivery of our website he was only a message away if we need any assistance.</p>
+          </div>
+          <div class="child_bottom">
+            <div class="author">
+              <img src="{% static 'img/testimonial_1.jpg' %}" alt="">
+            </div>
+            <div class="author_info">
+              <h4>Jonathon Doe</h4>
+              <p>Manager</p>
+            </div>
+          </div>
+        </div>
+        <div class="child">
+          <div class="child_head">
+            <i class='bx bxs-quote-alt-left'></i>
+            <div class="ratting">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bx-star' ></i>
+              <i class='bx bxs-star-half'></i>
+            </div>
+          </div>
+          <div class="child_body">
+            <p>Incredible experience. Communication was awesome. Paid very close attention to the details. He was able to catch several items I did not even think about or consider. Really enjoyed working with him on this project.He has been communicating with me very effectively and sharing the requirements very well. I definitely endorse him.</p>
+          </div>
+          <div class="child_bottom">
+            <div class="author">
+              <img src="{% static 'img/testimonial_2.jpg' %}" alt="">
+            </div>
+            <div class="author_info">
+              <h4>Jone Doe</h4>
+              <p>Manager</p>
+            </div>
+          </div>
+        </div>
+        <div class="child">
+          <div class="child_head">
+            <i class='bx bxs-quote-alt-left'></i>
+            <div class="ratting">
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+              <i class='bx bxs-star'></i>
+            </div>
+          </div>
+          <div class="child_body">
+            <p>I’ve made over 200 purchases on Fiverr and this was the best transaction out of all of them. The seller delivered top notch service and went above and beyond to help me get my store started. He is very kind and patient with all the questions and queries and delivers on time. I fully endorse him and will take his help again in the future.</p>
+          </div>
+          <div class="child_bottom">
+            <div class="author">
+              <img src="{% static 'img/testimonial_3.jpg' %}" alt="">
+            </div>
+            <div class="author_info">
+              <h4>Jone Doe</h4>
+              <p>Manager</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact_area">
+    <div class="container">
+      <div class="title">
+        <h4>Let's get in touch</h4>
+        <h2>Contact</h2>
+      </div>
+      <div class="inner">
+        <form action="">
+          <label for="name">Your Name</label>
+          <input type="text" placeholder="Enter Your Name">
+          <label for="email">Your Email</label>
+          <input type="email" placeholder="Enter Your Email">
+          <label for="phone">Your Phone Number</label>
+          <input type="number" placeholder="Enter Your Phone Number">
+          <label for="message">Your Message</label>
+          <textarea placeholder="Enter Your Message"></textarea>
+          <input type="submit" value="Send Message">
+        </form>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+{% endblock %}

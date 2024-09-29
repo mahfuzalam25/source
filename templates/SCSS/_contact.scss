@@ -1,0 +1,43 @@
+#contact_area{
+  background: $bgColor;
+  padding: $paddingLg;
+  .inner{
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+    form{
+      text-align: center;
+    }
+    label{
+      color: $whColor;
+      font-size: 18px;
+      font-weight: 600;
+      display: block;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+    input, textarea{
+      border: 1px solid #636e72;
+      padding: 15px;
+      background: $childbg;
+      color: $whColor;
+      margin-bottom: 15px;
+      width: 100%;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+    textarea{
+      min-height: 120px;
+    }
+    input[type="submit"]{
+      background: $primaryColor;
+      width: 200px;
+      font-weight: 600;
+      border: 0;
+      transition: 0.5s;
+      &:hover{
+        background: $secColor;
+      }
+    }
+  }
+}

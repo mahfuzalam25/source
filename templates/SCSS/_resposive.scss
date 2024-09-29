@@ -1,0 +1,123 @@
+// Medium Layout : 1280px
+
+@media only screen and (min-width: 992px) and (max-width: 1280px) {
+  #header_area .logo_area {
+    flex-basis: 20%;
+}
+#header_area .menu_area {
+  flex-basis: 68%;
+}
+.container {
+  max-width: 960px;
+}
+}
+
+// Tablet Layout : 768px
+
+@media only screen and (min-width: 200px) and (max-width: 991px) {
+  #header_area .logo_area {
+    flex-basis: 20%;
+}
+#header_area .menu_area {
+  flex-basis: 68%;
+}
+#header_area .menu_area a {
+  font-size: 14px;
+  padding: 5px;
+}
+a.cta_btn {
+  padding: 10px 15px;
+  font-size: 13px;
+}
+#hero_area .info_area h1 {
+  font-size: 55px;
+}
+.inner .child h3 {
+  font-size: 18px;
+}
+#testimonial_area .child_bottom .author {
+  flex-basis: 50%;
+}
+#testimonial_area .child_bottom .author_info h4 {
+  font-size: 15px;
+}
+}
+
+// Mobile Layout : 480px
+
+@media only screen and (min-width: 200px) and (max-width: 767px) {
+  #header_area {
+    position: relative;
+}
+  #header_area .logo_area {
+    flex-basis: 48%;
+  }
+  #header_area .download_cv {
+  flex-basis: 50%;
+  }
+  #header_area .menu_area {
+   flex-basis: 100%;
+   width: 100%;
+   position: fixed;
+   bottom: 0;
+   left: 0;
+   z-index: 999;
+   background: $primaryColor;
+   padding: 0;
+   ul{
+     text-align: center;
+     padding-top: 5px;
+     li{
+       margin: 0 0.5%;
+     }
+     a{
+       color: $whColor;
+       &:hover{
+        color: $secColor;
+       }
+     }
+     i{
+       display: block;
+       margin-bottom: 5px;
+     }
+  }
+ }
+   #hero_area .admin_image {
+   flex-basis: 100%;
+   order: 1;
+   margin-bottom: 15px;
+   }
+   #hero_area .info_area {
+   flex-basis: 100%;
+   order: 2;
+   padding-bottom: 20px;
+  }
+#hero_area .inner, 
+#service_area .inner, 
+#testimonial_area .inner {
+  flex-direction: column;
+}
+#hero_area .info_area h1 {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+#hero_area .info_area h5 {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+#hero_area .info_area h6 {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+#service_area .child, 
+#testimonial_area .child{
+  margin-bottom: 25px;
+}
+ #portfolio_area .inner .portfolio {
+  flex-basis: 48%;
+  margin-bottom: 15px;
+ }
+ #footer_area {
+  padding: 15px 0 70px;
+ }
+}

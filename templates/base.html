@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %} {% endblock %}- Mahfuz Alam Chowdhury</title>
+  {% load static %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+{% comment %} BootStrap {% endcomment %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="{% static 'css/styl.min.css' %}">
+{% block extra_styles %}{% endblock %}
+</head>
+
+<body id="/">
+  {% block navbar %}
+  <header id="header_area">
+    <div class="container inner">
+      <div class="logo_area">
+        <h1><a href="/">Mahfuz Alam.</a></h1>
+      </div>
+      <div class="menu_area">
+        <nav id="main_menu">
+          <ul class="ul">
+            <li><a href="/"><i class='bx bx-home-alt'></i><span>Home</span></a></li>
+            <li><a href="#hero_area"><i class='bx bx-user'></i><span>About</span></a></li>
+            <li><a href="#service_area"><i class='bx bx-cog'></i><span>Service</span></a></li>
+            <li><a href="#portfolio_area"><i class='bx bxs-landscape'></i><span>Portfolio</span></a></li>
+            <li><a href="/contact"><i class='bx bx-envelope'></i><span>Contact</span></a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="download_cv">
+        <a class="cta_btn" href="https://drive.google.com/file/d/15atmCFWAcOJki1EwB-8SbcLwgTbWH_ww/view?usp=drivesdk">Download CV</a>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    {% block content %}{% endblock %}
+</div>
+  {% endblock  %}
+
+  <footer id="footer_area">
+    <div class="container">
+      <div class="inner">
+        <p>&copy; All right reserved</p>
+        <a href="#top"><i class='bx bx-up-arrow-alt'></i></a>
+      </div>
+    </div>
+  </footer>
+  {% comment %} BootStrap Script {% endcomment %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+#portfolio_area{
+  width: 100%;
+  background: $bgColor;
+  padding: $paddingLg;
+  .inner{
+    flex-wrap: wrap;
+    .portfolio{
+      flex-basis: 32%;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      position: relative;
+      transition: 0.4s ease-in;
+      &::after{
+        background: $primaryColor;
+        width: 100%;
+        height: 100%;
+        content: "";
+        left: 0;
+        top: -99999px;
+        position: absolute;
+        opacity: 0.3;
+      }
+      &:hover::after {
+        top: 0;
+      }
+      img{
+        transform: scale(1);
+        transition: 0.4s;
+        display: block;
+      }
+      &:hover img{
+        transform: scale(1.1);
+      }
+      a{
+        display: none;
+        background: $primaryColor;
+        padding: 10px 12px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        color: $whColor;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -20px;
+        margin-top: -20px;
+        z-index: 99;
+        &:hover{
+          background: $secColor;
+        }
+      }
+      &:hover a{
+        display: block;
+      }
+    }
+  }
+}
